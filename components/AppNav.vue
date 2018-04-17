@@ -10,16 +10,7 @@
 </template>
 
 <script>
-export default {
-  name: 'AppNav'
-}
-</script>
-
-<style lang="scss">
-.active {
-  &:focus, &:hover {
-    background: darkblue !important;
-    color: white;
+  export default {
+    name: 'AppNav'
   }
-}
-</style>
+</script>

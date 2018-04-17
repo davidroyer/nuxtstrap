@@ -6,6 +6,15 @@ header {
 
   nav {
     margin-left: auto;
+
+    .nav-link {
+      &.active {
+        &:focus, &:hover {
+          background: darkblue !important;
+          color: white;
+        }
+      }
+    }
   }
 }
 
