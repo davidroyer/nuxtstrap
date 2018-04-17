@@ -899,16 +899,18 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-bootstrap-vue@^1.0.2:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/bootstrap-vue/-/bootstrap-vue-1.5.1.tgz#0baa713d3b34a6c39197323f93989f7af55bc286"
+bootstrap-vue@^2.0.0-rc.8:
+  version "2.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/bootstrap-vue/-/bootstrap-vue-2.0.0-rc.8.tgz#f0c515fb812b38612ee1f35f4bb2d6a1b6a5fe3e"
   dependencies:
+    bootstrap "^4.0.0"
+    lodash.get "^4.4.2"
     lodash.startcase "^4.4.0"
     opencollective "^1.0.3"
     popper.js "^1.12.9"
-    vue-functional-data-merge "^2.0.3"
+    vue-functional-data-merge "^2.0.5"
 
-bootstrap@^4.0.0-beta.2:
+bootstrap@^4.0.0, bootstrap@^4.0.0-beta.2:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.0.tgz#110b05c31a236d56dbc9adcda6dd16f53738a28a"
 
@@ -3231,6 +3233,10 @@ lodash.camelcase@^4.3.0:
 lodash.clonedeep@^4.3.2:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
 
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
@@ -5951,7 +5957,7 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-functional-data-merge@^2.0.3:
+vue-functional-data-merge@^2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-2.0.6.tgz#f08055adfb92458debcf2ad10c3aa712277f7fc2"
 
