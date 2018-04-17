@@ -3,6 +3,7 @@
     <b-nav>
       <b-nav-item exact to="/">Home</b-nav-item>
       <b-nav-item to="/about">About</b-nav-item>
+      <b-nav-item to="/examples">Examples</b-nav-item>
       <b-nav-item to="/admin">Admin</b-nav-item>
       <b-button @click="$store.commit('toggleLoggedIn')" variant="primary" size="sm">Toggle Login</b-button>
     </b-nav>

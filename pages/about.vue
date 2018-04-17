@@ -11,6 +11,11 @@
 export default {
   head: {
     title: 'About'
+  },
+  fetch(context) {
+    const renderedFrom = process.server ? 'Server' : 'Client'
+    context.store.commit('setRenderedResult', renderedFrom)
   }
+
 }
 </script>

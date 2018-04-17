@@ -29,6 +29,10 @@ export default {
   head: {
     title: 'Home'
   },
+  fetch(context) {
+    const renderedFrom = process.server ? 'Server' : 'Client'
+    context.store.commit('setRenderedResult', renderedFrom)
+  },  
   data: () => ({
     modalShow: false
   }),

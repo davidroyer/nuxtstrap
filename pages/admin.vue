@@ -13,6 +13,10 @@ export default {
   head: {
     title: 'Admin'
   },
+  fetch(context) {
+    const renderedFrom = process.server ? 'Server' : 'Client'
+    context.store.commit('setRenderedResult', renderedFrom)
+  },  
   middleware: 'auth-check'
 }
 </script>
