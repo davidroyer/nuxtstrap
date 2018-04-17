@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  nav {
+    margin-left: auto;
+  }
+}
+
+.loggedIn-status {
+  flex-basis: 100%;
+  text-align: right;
+}
