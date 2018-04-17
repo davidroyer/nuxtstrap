@@ -16,3 +16,6 @@
     }
   }
 </script>
+
+<!-- <style src="@/assets/styles/first-transition.scss"></style> -->
+<style src="@/assets/styles/transitions.scss"></style>
