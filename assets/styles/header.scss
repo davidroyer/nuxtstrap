@@ -10,8 +10,9 @@ header {
     .nav-link {
       &.active {
         &:focus, &:hover {
-          background: darkblue !important;
+          background: #212529c4 !important;
           color: white;
+          border-radius: 5px;
         }
       }
     }

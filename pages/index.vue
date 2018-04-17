@@ -1,13 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
-      <h1 class="title">
-        nuxt-starter
-      </h1>
-      <h2 class="subtitle">
-        My super Nuxt.js project
-      </h2>
+      <h1 class="title">NuxtStrap</h1>
       <b-button variant="primary" @click="modalShow = !modalShow">
         Open Modal
       </b-button>
@@ -32,7 +26,7 @@ export default {
   fetch(context) {
     const renderedFrom = process.server ? 'Server' : 'Client'
     context.store.commit('setRenderedResult', renderedFrom)
-  },  
+  },
   data: () => ({
     modalShow: false
   }),
