@@ -5,8 +5,12 @@
       <b-button variant="primary" @click="modalShow = !modalShow">
         Open Modal
       </b-button>
-      <b-modal v-model="modalShow" title="Nuxt Quickstart">
+      <!-- <b-modal v-model="modalShow" title="Nuxt Quickstart">
+        <p class="my-4">Hello from modal!</p>
         Hello From Modal!
+      </b-modal> -->
+      <b-modal v-model="modalShow" id="modal1" title="Bootstrap-Vue">
+        <p class="my-4">Hello from modal!</p>
       </b-modal>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
