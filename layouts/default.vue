@@ -1,22 +1,21 @@
 <template>
-  <div id="app-wrapper" class="container">
-    <!-- <b-container> -->
-      <AppHeader/>
-      <nuxt id="view"/>
-      <AppFooter/>
-    <!-- </b-container> -->
-  </div>
+<div id="app-wrapper" class="container">
+  <AppHeader/>
+  <nuxt id="view" />
+  <AppFooter/>
+</div>
 </template>
 
 <script>
-  import AppHeader from '@/components/AppHeader'
+import AppHeader from '@/components/AppHeader'
 
-  export default {
-    components: {
-      AppHeader,
-      AppFooter: () => import('@/components/AppFooter')
-    }
+export default {
+  components: {
+    AppHeader,
+    AppFooter: () =>
+      import ('@/components/AppFooter')
   }
+}
 </script>
 
 <!-- <style src="@/assets/styles/first-transition.scss"></style> -->
