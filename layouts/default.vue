@@ -1,8 +1,10 @@
 <template>
-  <div id="app-wrapper">
-    <AppHeader/>
-    <nuxt/>
-    <AppFooter/>
+  <div id="app-wrapper" class="container">
+    <!-- <b-container> -->
+      <AppHeader/>
+      <nuxt id="view"/>
+      <AppFooter/>
+    <!-- </b-container> -->
   </div>
 </template>
 

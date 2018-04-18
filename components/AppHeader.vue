@@ -1,8 +1,8 @@
 <template>
   <header>
-    <h1>Creating Nuxt.js Apps</h1>
+    <h1>NuxtStrap</h1>
     <AppNav/>
-    <span class="loggedIn-status">{{$store.state.loggedIn}}</span>
+    <h6 class="loggedIn-status">Logged In: <b-badge variant="info">{{$store.state.loggedIn}}</b-badge></h6>
   </header>
 </template>
 

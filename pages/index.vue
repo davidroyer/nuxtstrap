@@ -1,11 +1,11 @@
 <template>
   <section class="container">
     <div>
-      <h1 class="title">NuxtStrap</h1>
+      <h1 class="title">NuxtStrap Project Template</h1>
       <b-button variant="primary" @click="modalShow = !modalShow">
         Open Modal
       </b-button>
-      <b-modal v-model="modalShow" title="Nuxt Quickstart">
+      <b-modal modal-class="fade" v-model="modalShow" title="Nuxt Quickstart">
         <p class="my-4">Some modal content here...</p>
       </b-modal>
       <div class="links">

@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    // title: pkg.name,
     titleTemplate: '%s - NuxtStrap',
     meta: [
       { charset: 'utf-8' },

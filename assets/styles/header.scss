@@ -9,7 +9,8 @@ header {
 
     .nav-link {
       &.active {
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           background: #212529c4 !important;
           color: white;
           border-radius: 5px;
@@ -22,4 +23,18 @@ header {
 .loggedIn-status {
   flex-basis: 100%;
   text-align: right;
+  flex-basis: 100%;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  margin-top: 0.5em;
+  align-items: center;
+  text-transform: capitalize;
+  padding: 1em 0;
+
+  .badge-info {
+    margin-left: 0.5em;
+    font-size: 0.85em;
+  }
 }

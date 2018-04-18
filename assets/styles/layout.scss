@@ -1,11 +1,11 @@
 .container
 {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: center;
-  margin-top: 2.5em;
+  // min-height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: flex-start;
+  // text-align: center;
+  // margin-top: 2.5em;
 }
 .title
 {
@@ -40,3 +40,12 @@
 }
 
 #toggle-login { margin-left: 1em;}
+
+header, footer, #view {
+  flex-basis: 100%;
+}
+
+#view {
+  min-height: 65vh;
+  margin-top: 2.5em;
+}
