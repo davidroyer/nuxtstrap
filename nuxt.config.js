@@ -64,6 +64,7 @@ module.exports = {
       callback: '/about'
     },
     strategies: {
+      local: false,
       auth0: {
         domain: 'droyer.auth0.com',
         client_id: 'jMSvvKeFirdoe72DO221g7eoYlWGJM0h'
