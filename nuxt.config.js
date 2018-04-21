@@ -1,4 +1,7 @@
 const pkg = require('./package')
+const path = require('path')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob-all')
 
 module.exports = {
   mode: 'universal',
@@ -58,8 +61,27 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-
+    extend(config, { isDev }) {
+      if (!isDev) {
+        config.plugins.push(
+          new PurgecssPlugin({
+            // purgecss configuration
+            // https://github.com/FullHuman/purgecss
+            paths: glob.sync([
+              path.join(__dirname, './pages/**/*.vue'),
+              path.join(__dirname, './layouts/**/*.vue'),
+              path.join(__dirname, './components/**/*.vue')
+            ]),
+            // extractors: [
+            //   {
+            //     extractor: TailwindExtractor,
+            //     extensions: ['vue']
+            //   }
+            // ],
+            whitelist: ['html', 'body', 'nuxt-progress']
+          })
+        )
+      }
     }
   }
 }

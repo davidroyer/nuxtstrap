@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/droyer/.nvm/versions/node/v8.7.0/bin/node /Users/droyer/.yarn/bin/yarn.js add bootstrap/vue@latest
+  /Users/droyer/.nvm/versions/node/v8.7.0/bin/node /Users/droyer/.yarn/bin/yarn.js build
 
 PATH: 
   /Users/droyer/.yarn/bin:/Users/droyer/.nvm/versions/node/v8.7.0/bin:/users/droyer/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -28,12 +28,14 @@ npm manifest:
     },
     "dependencies": {
       "bootstrap": "^4.0.0-beta.2",
-      "bootstrap-vue": "^1.0.2",
+      "bootstrap-vue": "^2.0.0-rc.8",
       "nuxt": "^1.0.0"
     },
     "devDependencies": {
       "cross-env": "^5.0.1",
+      "glob-all": "^3.1.0",
       "node-sass": "^4.8.3",
+      "purgecss": "^0.21.0",
       "sass-loader": "^7.0.1"
     }
   }
@@ -943,16 +945,18 @@ Lockfile:
     dependencies:
       hoek "4.x.x"
   
-  bootstrap-vue@^1.0.2:
-    version "1.5.1"
-    resolved "https://registry.yarnpkg.com/bootstrap-vue/-/bootstrap-vue-1.5.1.tgz#0baa713d3b34a6c39197323f93989f7af55bc286"
+  bootstrap-vue@^2.0.0-rc.8:
+    version "2.0.0-rc.8"
+    resolved "https://registry.yarnpkg.com/bootstrap-vue/-/bootstrap-vue-2.0.0-rc.8.tgz#f0c515fb812b38612ee1f35f4bb2d6a1b6a5fe3e"
     dependencies:
+      bootstrap "^4.0.0"
+      lodash.get "^4.4.2"
       lodash.startcase "^4.4.0"
       opencollective "^1.0.3"
       popper.js "^1.12.9"
-      vue-functional-data-merge "^2.0.3"
+      vue-functional-data-merge "^2.0.5"
   
-  bootstrap@^4.0.0-beta.2:
+  bootstrap@^4.0.0, bootstrap@^4.0.0-beta.2:
     version "4.1.0"
     resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.0.tgz#110b05c31a236d56dbc9adcda6dd16f53738a28a"
   
@@ -1279,6 +1283,14 @@ Lockfile:
     dependencies:
       string-width "^1.0.1"
       strip-ansi "^3.0.1"
+      wrap-ansi "^2.0.0"
+  
+  cliui@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/cliui/-/cliui-4.0.0.tgz#743d4650e05f36d1ed2575b59638d87322bfbbcc"
+    dependencies:
+      string-width "^2.1.1"
+      strip-ansi "^4.0.0"
       wrap-ansi "^2.0.0"
   
   clone-deep@^2.0.1:
@@ -1885,6 +1897,12 @@ Lockfile:
       dom-serializer "0"
       domelementtype "1"
   
+  dot-prop@^4.1.1:
+    version "4.2.0"
+    resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-4.2.0.tgz#1f19e0c2e1aa0e32797c49799f2837ac6af69c57"
+    dependencies:
+      is-obj "^1.0.0"
+  
   duplexer@^0.1.1:
     version "0.1.1"
     resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -2472,6 +2490,13 @@ Lockfile:
     dependencies:
       assert-plus "^1.0.0"
   
+  glob-all@^3.1.0:
+    version "3.1.0"
+    resolved "https://registry.yarnpkg.com/glob-all/-/glob-all-3.1.0.tgz#8913ddfb5ee1ac7812656241b03d5217c64b02ab"
+    dependencies:
+      glob "^7.0.5"
+      yargs "~1.2.6"
+  
   glob-parent@^3.1.0:
     version "3.1.0"
     resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
@@ -3011,6 +3036,10 @@ Lockfile:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/is-number/-/is-number-4.0.0.tgz#0026e37f5454d73e356dfe6564699867c6a7f0ff"
   
+  is-obj@^1.0.0:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
+  
   is-odd@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/is-odd/-/is-odd-2.0.0.tgz#7646624671fd7ea558ccd9a2795182f2958f1b24"
@@ -3276,6 +3305,10 @@ Lockfile:
     version "4.5.0"
     resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
   
+  lodash.get@^4.4.2:
+    version "4.4.2"
+    resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  
   lodash.isplainobject@^4.0.6:
     version "4.0.6"
     resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -3502,6 +3535,10 @@ Lockfile:
   minimist@1.2.0, minimist@^1.1.3, minimist@^1.2.0:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
+  
+  minimist@^0.1.0:
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.1.0.tgz#99df657a52574c21c9057497df742790b2b4c0de"
   
   mississippi@^2.0.0:
     version "2.0.0"
@@ -4594,6 +4631,14 @@ Lockfile:
       indexes-of "^1.0.1"
       uniq "^1.0.1"
   
+  postcss-selector-parser@^3.1.1:
+    version "3.1.1"
+    resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-3.1.1.tgz#4f875f4afb0c96573d5cf4d74011aee250a7e865"
+    dependencies:
+      dot-prop "^4.1.1"
+      indexes-of "^1.0.1"
+      uniq "^1.0.1"
+  
   postcss-svgo@^2.1.1:
     version "2.1.6"
     resolved "https://registry.yarnpkg.com/postcss-svgo/-/postcss-svgo-2.1.6.tgz#b6df18aa613b666e133f08adb5219c2684ac108d"
@@ -4642,7 +4687,7 @@ Lockfile:
       source-map "^0.5.6"
       supports-color "^3.2.3"
   
-  postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.17, postcss@^6.0.18, postcss@^6.0.5, postcss@^6.0.6, postcss@^6.0.8:
+  postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, postcss@^6.0.17, postcss@^6.0.18, postcss@^6.0.20, postcss@^6.0.5, postcss@^6.0.6, postcss@^6.0.8:
     version "6.0.21"
     resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.21.tgz#8265662694eddf9e9a5960db6da33c39e4cd069d"
     dependencies:
@@ -4744,6 +4789,15 @@ Lockfile:
   punycode@^2.1.0:
     version "2.1.0"
     resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
+  
+  purgecss@^0.21.0:
+    version "0.21.0"
+    resolved "https://registry.yarnpkg.com/purgecss/-/purgecss-0.21.0.tgz#64e62668ef11c9bc03d233843ad7006e1dfe578d"
+    dependencies:
+      glob "^7.1.2"
+      postcss "^6.0.20"
+      postcss-selector-parser "^3.1.1"
+      yargs "^11.1.0"
   
   q@^1.1.2:
     version "1.5.1"
@@ -5547,7 +5601,7 @@ Lockfile:
       is-fullwidth-code-point "^1.0.0"
       strip-ansi "^3.0.0"
   
-  string-width@^2.0.0:
+  string-width@^2.0.0, string-width@^2.1.1:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/string-width/-/string-width-2.1.1.tgz#ab93f27a8dc13d28cac815c462143a6d9012ae9e"
     dependencies:
@@ -5995,7 +6049,7 @@ Lockfile:
     dependencies:
       indexof "0.0.1"
   
-  vue-functional-data-merge@^2.0.3:
+  vue-functional-data-merge@^2.0.5:
     version "2.0.6"
     resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-2.0.6.tgz#f08055adfb92458debcf2ad10c3aa712277f7fc2"
   
@@ -6255,6 +6309,29 @@ Lockfile:
     dependencies:
       camelcase "^4.1.0"
   
+  yargs-parser@^9.0.2:
+    version "9.0.2"
+    resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-9.0.2.tgz#9ccf6a43460fe4ed40a9bb68f48d43b8a68cc077"
+    dependencies:
+      camelcase "^4.1.0"
+  
+  yargs@^11.1.0:
+    version "11.1.0"
+    resolved "https://registry.yarnpkg.com/yargs/-/yargs-11.1.0.tgz#90b869934ed6e871115ea2ff58b03f4724ed2d77"
+    dependencies:
+      cliui "^4.0.0"
+      decamelize "^1.1.1"
+      find-up "^2.1.0"
+      get-caller-file "^1.0.1"
+      os-locale "^2.0.0"
+      require-directory "^2.1.1"
+      require-main-filename "^1.0.1"
+      set-blocking "^2.0.0"
+      string-width "^2.0.0"
+      which-module "^2.0.0"
+      y18n "^3.2.1"
+      yargs-parser "^9.0.2"
+  
   yargs@^7.0.0:
     version "7.1.0"
     resolved "https://registry.yarnpkg.com/yargs/-/yargs-7.1.0.tgz#6ba318eb16961727f5d284f8ea003e8d6154d0c8"
@@ -6291,6 +6368,12 @@ Lockfile:
       y18n "^3.2.1"
       yargs-parser "^7.0.0"
   
+  yargs@~1.2.6:
+    version "1.2.6"
+    resolved "https://registry.yarnpkg.com/yargs/-/yargs-1.2.6.tgz#9c7b4a82fd5d595b2bf17ab6dcc43135432fe34b"
+    dependencies:
+      minimist "^0.1.0"
+  
   yargs@~3.10.0:
     version "3.10.0"
     resolved "https://registry.yarnpkg.com/yargs/-/yargs-3.10.0.tgz#f7ee7bd857dd7c1d2d38c0e74efbd681d1431fd1"
@@ -6301,11 +6384,17 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Couldn't find package "bootstrap/vue" on the "npm" registry.
-      at new MessageError (/Users/droyer/.yarn/lib/cli.js:186:110)
-      at NpmResolver.<anonymous> (/Users/droyer/.yarn/lib/cli.js:51625:15)
-      at Generator.next (<anonymous>)
-      at step (/Users/droyer/.yarn/lib/cli.js:98:30)
-      at /Users/droyer/.yarn/lib/cli.js:109:13
-      at <anonymous>
-      at process._tickCallback (internal/process/next_tick.js:188:7)
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c nuxt build
+  Directory: /Users/droyer/Playground-2017/nuxt-quickstart/nuxtstrap
+  Output:
+  
+      at ProcessTermError.MessageError (/Users/droyer/.yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/Users/droyer/.yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/Users/droyer/.yarn/lib/cli.js:30281:17)
+      at emitTwo (events.js:125:13)
+      at ChildProcess.emit (events.js:213:7)
+      at maybeClose (internal/child_process.js:927:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
