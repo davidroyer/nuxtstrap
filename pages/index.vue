@@ -2,6 +2,7 @@
   <section class="container">
     <div>
       <h1 class="title">NuxtStrap Project Template</h1>
+      <img class="hero-image" src="~/assets/nuxtstrap-image1.jpg" alt="">
       <b-button variant="primary" @click="modalShow = !modalShow">
         Open Modal
       </b-button>
@@ -11,6 +12,7 @@
       <div class="links">
         <a href="https://github.com/davidroyer/nuxtstrap" target="_blank" class="button--green">NuxtStrap Project Repo</a>
       </div>
+
     </div>
   </section>
 </template>
