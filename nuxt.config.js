@@ -47,9 +47,18 @@ module.exports = {
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
     // 'bootstrap-vue/nuxt'
-    ['bootstrap-vue/nuxt', { css: false }]
+    ['bootstrap-vue/nuxt', { css: false }],
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
-
+  auth: {
+    strategies: {
+      auth0: {
+        domain: 'droyer.auth0.com',
+        client_id: 'jMSvvKeFirdoe72DO221g7eoYlWGJM0h'
+      }
+    }
+  },
   /*
   ** Build configuration
   */
