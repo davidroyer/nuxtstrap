@@ -1,8 +1,8 @@
 <template>
   <footer>
     <div key="user-info" v-if="$auth.$state.loggedIn">
-      <div v-text="$auth.user.name"></div>
-      <b-img :src="$auth.user.picture_large" rounded="circle" width="65" height="65" alt="img" class="m-1" />
+      <div v-if="$auth.user.name" v-text="$auth.user.name"></div>
+      <b-img v-if="$auth.user.picture_large" :src="$auth.user.picture_large" rounded="circle" width="65" height="65" alt="img" class="m-1" />
     </div>
     <div key="no-user">
       <h3>No User Seen</h3>

@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
 
   /*
   ** Headers of the page
@@ -53,12 +53,12 @@ module.exports = {
   ],
 
   // serverMiddleware: ['../api/auth'],
-  axios: {
-    proxy: true
-  },
-  proxy: {
-    '/api': 'http://localhost:3000'
-  },
+  // axios: {
+  //   proxy: true
+  // },
+  // proxy: {
+  //   '/api': 'http://localhost:3000'
+  // },
   auth: {
     redirect: {
       callback: '/about'
