@@ -47,29 +47,9 @@ module.exports = {
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
     // 'bootstrap-vue/nuxt'
-    ['bootstrap-vue/nuxt', { css: false }],
-    '@nuxtjs/axios',
-    '@nuxtjs/auth'
+    ['bootstrap-vue/nuxt', { css: false }]
   ],
 
-  // serverMiddleware: ['../api/auth'],
-  axios: {
-    proxy: true
-  },
-  proxy: {
-    '/api': 'http://localhost:3000'
-  },
-  auth: {
-    redirect: {
-      callback: '/about'
-    },
-    strategies: {
-      auth0: {
-        domain: 'droyer.auth0.com',
-        client_id: 'jMSvvKeFirdoe72DO221g7eoYlWGJM0h'
-      }
-    }
-  },
   /*
   ** Build configuration
   */
