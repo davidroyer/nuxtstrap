@@ -18,4 +18,4 @@
   }
 </script>
 
-<style src="@/assets/styles/transitions.scss"></style>
+<style src="@/assets/styles/transitions.scss" lang="scss"></style>
