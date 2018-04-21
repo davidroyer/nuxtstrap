@@ -4,7 +4,7 @@
       <div v-if="$auth.user.name" v-text="$auth.user.name"></div>
       <b-img v-if="$auth.user.picture_large" :src="$auth.user.picture_large" rounded="circle" width="65" height="65" alt="img" class="m-1" />
     </div>
-    <div key="no-user">
+    <div v-else key="no-user">
       <h3>No User Seen</h3>
     </div>
     <h4 class="render-result">Rendered From:  <span class="subtitle" v-text="$store.state.renderedFrom"></span></h4>
