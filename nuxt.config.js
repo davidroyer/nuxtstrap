@@ -51,7 +51,18 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/auth'
   ],
+
+  // serverMiddleware: ['../api/auth'],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': 'http://localhost:3000'
+  },
   auth: {
+    redirect: {
+      callback: '/about'
+    },
     strategies: {
       auth0: {
         domain: 'droyer.auth0.com',
