@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
   head: {
     title: 'Home'
@@ -28,9 +26,6 @@ export default {
   },
   data: () => ({
     modalShow: false
-  }),
-  components: {
-    Logo
-  },
+  })
 }
 </script>

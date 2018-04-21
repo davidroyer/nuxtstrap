@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <section class="container">
     <div>
       <h1 class="title">About Page</h1>

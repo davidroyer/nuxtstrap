@@ -11,17 +11,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  width: 100%;
-  align-items: center;
-  padding: .5em;
-  background: #eee;
-}
-</style>
+<style src="@/assets/styles/components/app-footer.scss" lang="scss" scoped></style>
