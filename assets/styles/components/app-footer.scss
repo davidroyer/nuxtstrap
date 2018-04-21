@@ -1,7 +1,7 @@
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
@@ -9,4 +9,21 @@ footer {
   align-items: center;
   padding: .5em;
   background: #eee;
+}
+
+.pre-wrapper {
+  max-width: 100%;
+  width: 100%;
+}
+
+pre {
+  height: 140px;
+  overflow: scroll;
+  margin: 1em;
+  max-width: 100%;
+  color: #f9f9f9;
+  overflow: scroll;
+  background: #2b2b2b;
+    margin: 1em 0;
+    padding: .5em;
 }

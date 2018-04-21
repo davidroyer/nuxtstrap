@@ -7,6 +7,12 @@
     <div v-else key="no-user">
       <h3>No User Seen</h3>
     </div>
+    <div class="pre-wrapper">
+      <pre>{{$auth.user}}</pre>
+    </div>
+  <div class="pre-wrapper">
+      <pre>{{$auth.$state}}</pre>
+  </div>
     <h4 class="render-result">Rendered From:  <span class="subtitle" v-text="$store.state.renderedFrom"></span></h4>
   </footer>
 </template>
