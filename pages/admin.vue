@@ -11,10 +11,10 @@
 </template>
 
 <script>
-export default {
-  head: {
-    title: 'Admin'
-  },
-  middleware: 'auth-check'
-}
+  export default {
+    head: {
+      title: 'Admin'
+    },
+    middleware: 'auth-check'
+  }
 </script>

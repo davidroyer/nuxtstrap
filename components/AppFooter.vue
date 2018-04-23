@@ -8,9 +8,9 @@
 </template>
 
 <script>
-export default {
-  name: 'AppFooter'
-}
+  export default {
+    name: 'AppFooter'
+  }
 </script>
 
 <style src="@/assets/styles/components/app-footer.scss" lang="scss" scoped></style>
