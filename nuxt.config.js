@@ -23,6 +23,9 @@ module.exports = {
     ]
   },
 
+  router: {
+    middleware: 'rendered'
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -54,7 +57,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extractCSS: true,
     /*
     ** You can extend webpack config here
     */

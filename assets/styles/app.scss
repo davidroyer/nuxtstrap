@@ -6,6 +6,15 @@ $red: #F46272;
   display: flex;
   flex-flow: row wrap;
   align-content: space-between;
+  height: 100vh;
+}
+#view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1.5em;
+  margin-bottom: 2.5em;
 }
 @import 'layout';
 // @import 'transitions';

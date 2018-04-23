@@ -1,21 +1,21 @@
 <template>
-  <div id="app-wrapper" class="container">
+  <div id="app-wrapper">
     <AppHeader/>
-    <nuxt id="view"/>
+    <nuxt id="view" class="container"/>
     <AppFooter/>
   </div>
 </template>
 
 <script>
-  import AppHeader from '@/components/AppHeader'
-  import AppFooter from '@/components/AppFooter'
+import AppHeader from '@/components/AppHeader'
+import AppFooter from '@/components/AppFooter'
 
-  export default {
-    components: {
-      AppHeader,
-      AppFooter
-    }
+export default {
+  components: {
+    AppHeader,
+    AppFooter
   }
+}
 </script>
 
 <style src="@/assets/styles/transitions.scss" lang="scss"></style>

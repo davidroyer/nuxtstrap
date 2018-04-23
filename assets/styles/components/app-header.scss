@@ -3,10 +3,13 @@ header {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1em;
 
   nav {
     margin-left: auto;
-
+    .nav {
+      align-items: center;
+    }
     .nav-link {
       &.active {
         &:focus,
