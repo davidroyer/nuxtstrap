@@ -1,13 +1,15 @@
 <template>
   <footer>
-    <h4 class="render-result">Rendered From:  <span class="subtitle" v-text="$store.state.renderedFrom"></span></h4>
+    <h4 class="render-result">
+      Rendered From:
+      <span class="subtitle" v-text="$store.state.renderedFrom"></span>
+    </h4>
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'AppFooter',
-  props: ['renderResult']
+  name: 'AppFooter'
 }
 </script>
 

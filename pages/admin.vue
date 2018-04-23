@@ -4,7 +4,7 @@
     <p>Your admin settings go here</p>
 
     <div class="mt-5">
-      <span class="h3">User Details</span>
+      <h2 class="h3">User Details</h2>
       <pre>{{$store.state.user}}</pre>
     </div>
   </div>
