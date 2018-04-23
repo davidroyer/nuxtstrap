@@ -1,18 +1,10 @@
 export const state = () => ({
-  loggedIn: false,
   loading: false,
-  user: null,
-  renderedFrom: null
+  renderedFrom: null,
+  user: null
 })
 
 export const mutations = {
-  setLoggedIn: (state, loggedInStatus) => {
-    state.loggedIn = loggedInStatus
-  },
-
-  setUser: (state, user) => {
-    state.user = user
-  },
 
   setLoading: (state, loadingStatus) => {
     state.loading = loadingStatus
@@ -20,17 +12,17 @@ export const mutations = {
 
   setRenderedResult: (state, renderResult) => {
     state.renderedFrom = renderResult
+  },
+
+  setUser: (state, user) => {
+    state.user = user
   }
+
 }
 
 export const actions = {
-  login ({ dispatch, commit }) {
-    return dispatch('mockLoginRequest', ).then(() => {
-      this.$router.push('/admin')
-    })
-  },
 
-  async loginAsync ({ dispatch, commit }) {
+  async login ({ dispatch, commit }) {
     commit('setLoading', true)
     const user = await dispatch('mockLoginRequest')
     dispatch('setCommitsForSuccessfulLogin', user)
@@ -38,13 +30,11 @@ export const actions = {
   },
 
   logout ({ commit }) {
-    commit('setLoggedIn', false)
     commit('setUser', null)
     this.$router.push('/login')
   },
 
   setCommitsForSuccessfulLogin ({commit}, user) {
-    commit('setLoggedIn', true)
     commit('setUser', user)
     commit('setLoading', false)
   },

@@ -3,38 +3,27 @@ import Vuex from 'vuex'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      loggedIn: false,
       loading: false,
+      renderedFrom: null,
       user: null,
-      renderedFrom: null
     },
 
     mutations: {
-      setLoggedIn: (state, loggedInStatus) => {
-        state.loggedIn = loggedInStatus
-      },
-
-      setUser: (state, user) => {
-        state.user = user
-      },
-
       setLoading: (state, loadingStatus) => {
         state.loading = loadingStatus
       },
 
       setRenderedResult: (state, renderResult) => {
         state.renderedFrom = renderResult
+      },
+
+      setUser: (state, user) => {
+        state.user = user
       }
     },
 
     actions: {
-      login ({ dispatch, commit }) {
-        return dispatch('mockLoginRequest', ).then(() => {
-          this.$router.push('/admin')
-        })
-      },
-
-      async loginAsync ({ dispatch, commit }) {
+      async login ({ dispatch, commit }) {
         commit('setLoading', true)
         const user = await dispatch('mockLoginRequest')
         dispatch('setCommitsForSuccessfulLogin', user)
@@ -42,13 +31,11 @@ const createStore = () => {
       },
 
       logout ({ commit }) {
-        commit('setLoggedIn', false)
         commit('setUser', null)
         this.$router.push('/login')
       },
 
       setCommitsForSuccessfulLogin ({commit}, user) {
-        commit('setLoggedIn', true)
         commit('setUser', user)
         commit('setLoading', false)
       },
