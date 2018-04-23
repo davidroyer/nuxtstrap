@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <h1 class="title">Home Page</h1>
-    <img class="hero-image" src="~/assets/nuxtstrap-image1.jpg" alt="">
+    <img class="hero-image" src="@/assets/images/nuxtstrap-image1.jpg" alt="">
     <b-button variant="primary" @click="modalShow = !modalShow">
       Open Modal
     </b-button>
