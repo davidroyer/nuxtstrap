@@ -7,6 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    title: 'Nuxt.js Quickstart Guide'
     titleTemplate: '%s - NuxtStrap',
     meta: [
       { charset: 'utf-8' },
