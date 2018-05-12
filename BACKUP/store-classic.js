@@ -25,19 +25,17 @@ const createStore = () => {
     actions: {
       async login ({ dispatch, commit }) {
         commit('setLoading', true)
+
         const user = await dispatch('mockLoginRequest')
-        dispatch('setCommitsForSuccessfulLogin', user)
+        commit('setUser', user)
+
+        commit('setLoading', false)
         this.$router.push('/admin')
       },
 
       logout ({ commit }) {
         commit('setUser', null)
         this.$router.push('/login')
-      },
-
-      setCommitsForSuccessfulLogin ({commit}, user) {
-        commit('setUser', user)
-        commit('setLoading', false)
       },
 
       mockLoginRequest () {
@@ -47,9 +45,7 @@ const createStore = () => {
           }, 2000)
         })
       }
-
     }
-
   })
 }
 
