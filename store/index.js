@@ -1,17 +1,18 @@
+/** WITHOUT ARROW FUNCTIONS
+  export const state = function() {
+    return {
+      loading: false,
+      renderedFrom: null,
+      user: null
+    };
+  };
+ */
+
 export const state = () => ({
   loading: false,
   renderedFrom: null,
   user: null
 })
-
-// Without Arrow Functions
-// export const state = function() {
-//   return {
-//     loading: false,
-//     renderedFrom: null,
-//     user: null
-//   };
-// };
 
 export const mutations = {
   setLoading (state, loadingStatus) {
