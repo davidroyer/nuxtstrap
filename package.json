@@ -8,7 +8,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy:now": "now --public && now alias"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
@@ -21,5 +22,12 @@
     "cross-env": "^5.0.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.1"
-  }
+  },
+  "now": {
+    "name": "nuxtqs-nuxtstrap",
+    "alias": [
+      "nuxtqs-nuxtstrap",
+      "nuxtstrap.nuxtjs-quickstart.com"
+    ]
+  }  
 }
