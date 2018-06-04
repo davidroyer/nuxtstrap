@@ -15,6 +15,6 @@
     head: {
       title: 'Admin'
     },
-    middleware: 'auth-check'
+    middleware: ['auth-check', 'example-middleware']
   }
 </script>

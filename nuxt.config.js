@@ -18,13 +18,21 @@ module.exports = {
     ]
   },
 
+  dir: {
+    middleware: 'router-middleware', // Default: 'middleware'
+  },
+
   router: {
     middleware: 'rendered'
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#FFFFFF' },
+  loading: {
+    color: '#007bff',
+    // height: '5px'
+  },
+  // loading: { color: '#FFFFFF' },
 
   /*
   ** Global CSS

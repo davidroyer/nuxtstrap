@@ -4,17 +4,25 @@ export const state = () => ({
   user: null
 })
 
+// Without Arrow Functions
+// export const state = function() {
+//   return {
+//     loading: false,
+//     renderedFrom: null,
+//     user: null
+//   };
+// };
 
 export const mutations = {
-  setLoading: (state, loadingStatus) => {
+  setLoading (state, loadingStatus) {
     state.loading = loadingStatus
   },
 
-  setRenderedResult: (state, renderResult) => {
+  setRenderedResult (state, renderResult) {
     state.renderedFrom = renderResult
   },
 
-  setUser: (state, user) => {
+  setUser (state, user) {
     state.user = user
   }
 }
