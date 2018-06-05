@@ -1,13 +1,3 @@
-/** WITHOUT ARROW FUNCTIONS
-  export const state = function() {
-    return {
-      loading: false,
-      renderedFrom: null,
-      user: null
-    };
-  };
- */
-
 export const state = () => ({
   loading: false,
   renderedFrom: null,
