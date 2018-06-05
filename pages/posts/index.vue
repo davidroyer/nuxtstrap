@@ -16,7 +16,7 @@ export default {
     title: 'Login'
   },
   async asyncData({ app }) {
-    const posts = await app.$axios.$get('http://jsonplaceholder.typicode.com/posts?_limit=10')
+    const posts = await app.$axios.$get('https://jsonplaceholder.typicode.com/posts?_limit=10')
     return { posts }
   }
 }
