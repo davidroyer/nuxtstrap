@@ -4,6 +4,8 @@
       <b-nav-item exact to="/">Home</b-nav-item>
       <b-nav-item to="/about">About</b-nav-item>
       <b-nav-item to="/posts">Posts</b-nav-item>
+      <b-nav-item to="/api/">API</b-nav-item>
+      <!-- <b-nav-item to="/api/app-test">API</b-nav-item> -->
 
       <b-button v-if="!$store.state.user" to="/login"  id="toggle-login" variant="primary" size="sm">Login</b-button>
       <template v-else>

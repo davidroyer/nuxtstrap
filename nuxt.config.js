@@ -17,7 +17,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
+  env: {
+    PASS: 'passfromnuxtconfig'
+  },
   dir: {
     middleware: 'router-middleware', // Default: 'middleware'
   },
@@ -52,6 +54,7 @@ module.exports = {
   */
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
+    '@nuxtjs/dotenv',
     ['bootstrap-vue/nuxt', { css: false }],
     'nuxt-device-detect',
     '@nuxtjs/axios'
@@ -67,5 +70,19 @@ module.exports = {
     extend(config, ctx) {
 
     }
-  }
+  },
+  serverMiddleware: [
+    // body-parser middleware
+    // bodyParser.json(),
+    // session middleware
+    // session({
+    //   secret: 'super-secret-key',
+    //   resave: false,
+    //   saveUninitialized: false,
+    //   cookie: { maxAge: 60000 }
+    // }),
+    // Api middleware
+    // We add /api/login & /api/logout routes
+    '~/api/index.js'
+  ]
 }
