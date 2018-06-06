@@ -1,3 +1,5 @@
+const netlifyIdentity = require("netlify-identity-widget");
+
 export const state = () => ({
   loading: false,
   renderedFrom: null,
@@ -20,6 +22,7 @@ export const mutations = {
 
 
 export const actions = {
+  // nuxtClientInit ()
   mockLoginRequest () {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -36,8 +39,23 @@ export const actions = {
     this.$router.push('/admin')
   },
 
+  netlifyLogin ({ dispatch, commit }) {
+    netlifyIdentity.open();
+  },
+
+  netlifyLogout ({ dispatch, commit }) {
+    commit('setUser', null)
+    netlifyIdentity.logout();
+  },
+  // handleLogin()
   logout ({ commit }) {
     commit('setUser', null)
     this.$router.push('/login')
+  },
+
+  nuxtServerInit ({ commit }, { req }) {
+    // if (req.session.user) {
+    //   commit('user', req.session.user)
+    // }
   }
 }

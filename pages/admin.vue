@@ -3,7 +3,7 @@
     <h1 class="title">Admin Page</h1>
     <p>Your admin settings go here</p>
 
-    <div class="mt-5">
+    <div class="mt-5 fix-width">
       <h2 class="h3">User Details</h2>
       <pre>{{$store.state.user}}</pre>
     </div>
@@ -18,3 +18,9 @@
     middleware: ['auth-check', 'example-middleware']
   }
 </script>
+
+<style>
+.fix-width {
+  max-width: 100%;
+}
+</style>
