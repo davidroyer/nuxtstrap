@@ -3,7 +3,7 @@ import netlifyIdentity from 'netlify-identity-widget';
 export default (context, inject) => {
   console.log('RAN FROM AUTH.JS');
   // await ctx.store.dispatch("nuxtClientInit", ctx);
-  if (process.browser) {
+  if (process.client) {
     window.netlifyIdentity = netlifyIdentity
     // You must run this once before trying to interact with the widget
     netlifyIdentity.init();

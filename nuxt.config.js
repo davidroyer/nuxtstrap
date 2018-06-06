@@ -95,6 +95,6 @@ module.exports = {
     // }),
     // Api middleware
     // We add /api/login & /api/logout routes
-    '~/api/index.js'
+    // '~/api/index.js'
   ]
 }
