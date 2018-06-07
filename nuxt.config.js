@@ -1,10 +1,8 @@
 const pkg = require('./package')
-// const bodyParser = require('body-parser')
 const session = require('express-session')
 require('dotenv').config()
 
 module.exports = {
-  // mode: 'universal',
   env: {
     adminPassword: process.env.PASSWORD
   },
@@ -21,10 +19,6 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
-  },
-
-  dir: {
-    middleware: 'router-middleware', // Default: 'middleware'
   },
 
   router: {
