@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/droyer/.nvm/versions/node/v8.7.0/bin/node /Users/droyer/.yarn/bin/yarn.js start
+  /Users/droyer/.nvm/versions/node/v8.7.0/bin/node /Users/droyer/.yarn/bin/yarn.js generate
 
 PATH: 
   /Users/droyer/.yarn/bin:/Users/droyer/.nvm/versions/node/v8.7.0/bin:/users/droyer/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -16,26 +16,27 @@ Platform:
 npm manifest: 
   {
     "name": "nuxtstrap",
-    "version": "0.0.11",
+    "version": "0.0.21",
     "description": "NuxtStrap App for Nuxt Quickstart Guide",
     "author": "David Royer",
     "private": true,
     "scripts": {
-      "dev": "PASSWORD=pass123 nuxt",
+      "dev": "nuxt",
       "dev:api": "yarn api && nuxt",
-      "build": "nuxt build",
-      "start": "nuxt start",
-      "api": "json-server --watch api/db.json",
+      "build": "NODE_ENV=production nuxt build",
+      "start": "NODE_ENV=production nuxt start",
       "generate": "nuxt generate",
       "deploy:now": "now --dotenv --public && now alias"
     },
     "dependencies": {
       "@nuxtjs/axios": "^5.3.1",
       "@nuxtjs/dotenv": "^1.1.1",
+      "@nuxtjs/toast": "^3.0.1",
       "body-parser": "^1.18.3",
       "bootstrap": "^4.0.0-beta.2",
       "bootstrap-vue": "^2.0.0-rc.8",
       "express-session": "^1.15.6",
+      "fs-extra": "^6.0.1",
       "netlify-identity-widget": "^1.4.13",
       "nuxt": "^1.0.0",
       "nuxt-device-detect": "^1.1.1"
@@ -84,6 +85,12 @@ Lockfile:
     dependencies:
       consola "^1.1.4"
       http-proxy-middleware "^0.18.0"
+  
+  "@nuxtjs/toast@^3.0.1":
+    version "3.0.1"
+    resolved "https://registry.yarnpkg.com/@nuxtjs/toast/-/toast-3.0.1.tgz#20ea4eeb15dbac12d9967e85b809ca49c8a14cf5"
+    dependencies:
+      vue-toasted "^1.1.24"
   
   "@nuxtjs/youch@^4.2.3":
     version "4.2.3"
@@ -2590,6 +2597,14 @@ Lockfile:
   fs-extra@^5.0.0:
     version "5.0.0"
     resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
+    dependencies:
+      graceful-fs "^4.1.2"
+      jsonfile "^4.0.0"
+      universalify "^0.1.0"
+  
+  fs-extra@^6.0.1:
+    version "6.0.1"
+    resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.1.tgz#8abc128f7946e310135ddc93b98bddb410e7a34b"
     dependencies:
       graceful-fs "^4.1.2"
       jsonfile "^4.0.0"
@@ -6601,6 +6616,10 @@ Lockfile:
     version "1.6.0"
     resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
   
+  vue-toasted@^1.1.24:
+    version "1.1.24"
+    resolved "https://registry.yarnpkg.com/vue-toasted/-/vue-toasted-1.1.24.tgz#715a371dfa490cc710ffedaaeae61fd8a8c4f7ad"
+  
   vue@^2.5.13:
     version "2.5.16"
     resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
@@ -6886,7 +6905,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c nuxt start
+  Arguments: -c nuxt generate
   Directory: /Users/droyer/Playground-2017/nuxt-quickstart/nuxtstrap
   Output:
   

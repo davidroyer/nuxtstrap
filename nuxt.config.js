@@ -3,6 +3,8 @@ const session = require('express-session')
 require('dotenv').config()
 
 module.exports = {
+  mode: 'spa',
+
   env: {
     adminPassword: process.env.PASSWORD
   },
@@ -51,6 +53,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [,
+    '@/modules/scraper',
     '@nuxtjs/dotenv',
     '@nuxtjs/toast',
     ['bootstrap-vue/nuxt', { css: false }],
