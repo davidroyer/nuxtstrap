@@ -20,7 +20,6 @@ export const mutations = {
 
 
 export const actions = {
-
   nuxtServerInit({ commit }, { req }) {
     if (req.session && req.session.authUser) {
       commit('setUser', req.session.authUser)
@@ -36,6 +35,5 @@ export const actions = {
     await this.$axios.$post('/api/auth/logout')
     commit('setUser', null)
     this.$router.push('/login')
-
   }
 }

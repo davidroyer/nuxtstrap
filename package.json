@@ -1,15 +1,14 @@
 {
   "name": "nuxtstrap",
-  "version": "0.0.11",
+  "version": "0.0.2",
   "description": "NuxtStrap App for Nuxt Quickstart Guide",
   "author": "David Royer",
   "private": true,
   "scripts": {
-    "dev": "PASSWORD=pass123 nuxt",
+    "dev": "nuxt",
     "dev:api": "yarn api && nuxt",
     "build": "NODE_ENV=production nuxt build",
     "start": "NODE_ENV=production nuxt start",
-    "api": "json-server --watch api/db.json",
     "generate": "nuxt generate",
     "deploy:now": "now --dotenv --public && now alias"
   },

@@ -8,6 +8,7 @@ const middlewares = jsonServer.defaults()
 app.use(middlewares)
 
 app.post('/auth/login', (req, res) => {
+  console.log('process.env:  ', process.env);
   if (req.body.username === 'admin' && req.body.password === process.env.PASSWORD) {
     req.session.authUser = { username: 'admin' }
     return res.json({ username: 'admin' })
