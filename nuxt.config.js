@@ -60,7 +60,12 @@ module.exports = {
   //   '/api': 'http://localhost:3000'
   // },
   auth: {
+
     redirect: {
+      // login: '/?login=1',
+      // logout: '/',
+      // user: '/profile',
+      // callback:'/'
       callback: '/about'
     },
     strategies: {
