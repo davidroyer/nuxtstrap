@@ -30,11 +30,18 @@ export const actions = {
   async adminLogin ({ commit }, { username, password }) {
     const userData = await this.$axios.$post('/api/auth/login', { username, password })
     commit('setUser', userData)
+    this.$router.push('/admin')
+    await delay(750)
+    this.$toast.info('Successfully Logged In!')
   },
 
   async adminLogout ({ commit }) {
     await this.$axios.$post('/api/auth/logout')
     commit('setUser', null)
     this.$router.push('/login')
+    await delay(750)
+    this.$toast.show('Successfully Logged Out!')
   }
 }
+
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));

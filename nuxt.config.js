@@ -1,5 +1,5 @@
 const pkg = require('./package')
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 const session = require('express-session')
 require('dotenv').config()
 
@@ -31,10 +31,6 @@ module.exports = {
     middleware: 'rendered'
   },
 
-  // proxy: {
-  //   '/api': 'http://localhost:3000/api'
-  // },
-
   /*
   ** Customize the progress-bar color
   */
@@ -62,6 +58,7 @@ module.exports = {
   */
   modules: [,
     '@nuxtjs/dotenv',
+    '@nuxtjs/toast',
     ['bootstrap-vue/nuxt', { css: false }],
     'nuxt-device-detect',
     '@nuxtjs/axios'
@@ -71,6 +68,10 @@ module.exports = {
     baseURL: process.env.NODE_ENV === 'production' ? process.env.PRODUCTION_URL : 'http://localhost:3000'
   },
 
+  toast: {
+    position: 'top-center',
+    duration: 1500
+  },
   /*
   ** Build configuration
   */
@@ -84,7 +85,7 @@ module.exports = {
   },
   serverMiddleware: [
     // body-parser middleware
-    bodyParser.json(),
+    // bodyParser.json(),
     // session middleware
     session({
       secret: 'super-secret-key',

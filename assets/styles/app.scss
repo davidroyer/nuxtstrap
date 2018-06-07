@@ -16,6 +16,11 @@ $red: #F46272;
   margin-top: 1.5em;
   margin-bottom: 2.5em;
 }
+
+.toasted-container .toasted {
+  min-width: 235px;
+  justify-content: center !important;
+}
 @import 'layout';
 // @import 'transitions';
 @import '~bootstrap/scss/bootstrap';
