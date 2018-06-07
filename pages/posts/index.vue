@@ -13,7 +13,7 @@
 <script>
 export default {
   head: {
-    title: 'Login'
+    title: 'Posts'
   },
   async asyncData({ app }) {
     const posts = await app.$axios.$get('/api/posts')

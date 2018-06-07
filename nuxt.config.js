@@ -84,9 +84,6 @@ module.exports = {
     }
   },
   serverMiddleware: [
-    // body-parser middleware
-    // bodyParser.json(),
-    // session middleware
     session({
       secret: 'super-secret-key',
       resave: false,

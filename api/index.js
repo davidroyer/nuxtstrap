@@ -39,7 +39,6 @@ app.post('/auth/logout', (req, res) => {
 app.use(router)
 
 
-
 module.exports = {
   path: '/api',
   handler: app
