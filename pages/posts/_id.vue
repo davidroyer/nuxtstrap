@@ -12,7 +12,7 @@ export default {
     title: 'Post'
   },
   async asyncData({ app, params }) {
-    const post = await app.$axios.$get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+    const post = await app.$axios.$get(`/api/posts/${params.id}`)
     return { post }
   }
 }

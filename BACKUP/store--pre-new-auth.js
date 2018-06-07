@@ -37,5 +37,26 @@ export const actions = {
     commit('setUser', null)
     this.$router.push('/login')
 
+  },
+
+  mockLoginRequest () {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({name: 'David Royer', id: 1})
+      }, 2000)
+    })
+  },
+
+  async login ({ dispatch, commit }) {
+    commit('setLoading', true)
+    const user = await dispatch('mockLoginRequest')
+    commit('setUser', user)
+    commit('setLoading', false)
+    this.$router.push('/admin')
+  },
+
+  logout ({ commit }) {
+    commit('setUser', null)
+    this.$router.push('/login')
   }
 }

@@ -1,35 +1,28 @@
 const pkg = require('./package')
+const bodyParser = require('body-parser')
+const session = require('express-session')
+require('dotenv').config()
 
 module.exports = {
-  mode: 'spa',
-
+  // mode: 'universal',
+  env: {
+    adminPassword: process.env.PASSWORD
+  },
   /*
-   ** Headers of the page
-   */
+  ** Headers of the page
+  */
   head: {
     titleTemplate: '%s - NuxtStrap',
-    meta: [{
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: pkg.description
-      }
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
-  env: {
-    PASS: 'passfromnuxtconfig'
-  },
+
   dir: {
     middleware: 'router-middleware', // Default: 'middleware'
   },
@@ -37,9 +30,14 @@ module.exports = {
   router: {
     middleware: 'rendered'
   },
+
+  // proxy: {
+  //   '/api': 'http://localhost:3000/api'
+  // },
+
   /*
-   ** Customize the progress-bar color
-   */
+  ** Customize the progress-bar color
+  */
   loading: {
     color: '#007bff',
     // height: '5px'
@@ -47,54 +45,55 @@ module.exports = {
   // loading: { color: '#FFFFFF' },
 
   /*
-   ** Global CSS
-   */
+  ** Global CSS
+  */
   css: [
     '@/assets/styles/app.scss'
   ],
 
   /*
-   ** Plugins to load before mounting the App
-   */
+  ** Plugins to load before mounting the App
+  */
   plugins: [
-    '@/plugins/auth'
   ],
 
   /*
-   ** Nuxt.js modules
-   */
+  ** Nuxt.js modules
+  */
   modules: [,
-    // Doc: https://bootstrap-vue.js.org/docs/
-    '@nuxtjs/dotenv', ['bootstrap-vue/nuxt', {
-      css: false
-    }],
+    '@nuxtjs/dotenv',
+    ['bootstrap-vue/nuxt', { css: false }],
     'nuxt-device-detect',
     '@nuxtjs/axios'
   ],
 
+  axios: {
+    baseURL: process.env.NODE_ENV === 'production' ? process.env.PRODUCTION_URL : 'http://localhost:3000'
+  },
+
   /*
-   ** Build configuration
-   */
+  ** Build configuration
+  */
   build: {
     /*
-     ** You can extend webpack config here
-     */
+    ** You can extend webpack config here
+    */
     extend(config, ctx) {
 
     }
   },
   serverMiddleware: [
     // body-parser middleware
-    // bodyParser.json(),
+    bodyParser.json(),
     // session middleware
-    // session({
-    //   secret: 'super-secret-key',
-    //   resave: false,
-    //   saveUninitialized: false,
-    //   cookie: { maxAge: 60000 }
-    // }),
+    session({
+      secret: 'super-secret-key',
+      resave: false,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 }
+    }),
     // Api middleware
     // We add /api/login & /api/logout routes
-    // '~/api/index.js'
+    '~/api/index.js'
   ]
 }

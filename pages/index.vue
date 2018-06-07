@@ -35,11 +35,11 @@ export default {
 
   methods: {
     async getPosts() {
-      const posts = await this.$axios.$get('https://nuxtstrap.nuxtjs-quickstart.com/api/posts')
+      const posts = await this.$axios.$get('/api/posts')
     },
 
     async addPost() {
-      const response = await this.$axios.$post('https://nuxtstrap.nuxtjs-quickstart.com/api/posts', this.post)
+      const response = await this.$axios.$post('/api/posts', this.post)
       console.log(response);
     }
   }

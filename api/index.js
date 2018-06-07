@@ -7,17 +7,17 @@ const middlewares = jsonServer.defaults()
 
 app.use(middlewares)
 
-// Add custom routes before JSON Server router
-app.get('/app-test', (req, res, next) => {
-  console.log(process.env.PASSWORD);
-  console.log('NEWWW');
-  let data = [
-    { name: 'Alexandre' },
-    { name: 'Pooya' },
-    { name: 'Sébastien' },
-    { password: process.env.PASSWORD}
-  ]
-  res.json(data)
+app.post('/auth/login', (req, res) => {
+  if (req.body.username === 'admin' && req.body.password === process.env.PASSWORD) {
+    req.session.authUser = { username: 'admin' }
+    return res.json({ username: 'admin' })
+  }
+  res.status(401).json({ message: 'Bad credentials' })
+})
+
+app.post('/auth/logout', (req, res) => {
+  delete req.session.authUser
+  res.json({ ok: true })
 })
 
 app.use(jsonServer.bodyParser)

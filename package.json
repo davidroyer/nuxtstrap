@@ -7,17 +7,19 @@
   "scripts": {
     "dev": "PASSWORD=pass123 nuxt",
     "dev:api": "yarn api && nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "build": "NODE_ENV=production nuxt build",
+    "start": "NODE_ENV=production nuxt start",
     "api": "json-server --watch api/db.json",
     "generate": "nuxt generate",
-    "deploy:now": "now -e PASSWORD=pass123forzeit --public && now alias"
+    "deploy:now": "now --dotenv --public && now alias"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/dotenv": "^1.1.1",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "^2.0.0-rc.8",
+    "express-session": "^1.15.6",
     "netlify-identity-widget": "^1.4.13",
     "nuxt": "^1.0.0",
     "nuxt-device-detect": "^1.1.1"
