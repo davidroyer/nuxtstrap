@@ -4,6 +4,7 @@ export const state = () => ({
   user: null
 })
 
+
 export const mutations = {
   setLoading (state, loadingStatus) {
     state.loading = loadingStatus
