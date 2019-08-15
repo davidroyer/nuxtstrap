@@ -16,12 +16,6 @@ export default (context, inject) => {
       console.log('Found user!');
       context.store.commit('setUser', user)
     }
-    // netlifyIdentity.on("init", user => console.log(user));
-    // netlifyIdentity.on("login", user => console.log(user));
-    // netlifyIdentity.on("logout", () => console.log("Logged out"));
-    // netlifyIdentity.on("error", err => console.error("Logged out"));
-    // netlifyIdentity.on("open", () => console.log("Widget opened"));
-    // netlifyIdentity.on("close", () => console.log("Widget closed"));
   }
   // app.i18n = new VueI18n({
     /* `VueI18n` options... */
