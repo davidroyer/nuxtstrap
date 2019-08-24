@@ -1,37 +1,41 @@
 Arguments: 
-  /Users/droyer/.nvm/versions/node/v8.7.0/bin/node /Users/droyer/.yarn/bin/yarn.js start
+  /Users/davidroyer/.nvm/versions/node/v10.15.0/bin/node /Users/davidroyer/.yarn/bin/yarn.js install
 
 PATH: 
-  /Users/droyer/.yarn/bin:/Users/droyer/.nvm/versions/node/v8.7.0/bin:/users/droyer/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /Users/davidroyer/.yarn/bin:/Users/davidroyer/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/davidroyer/.yarn/bin:/Users/davidroyer/.config/yarn/global/node_modules/.bin:/Users/davidroyer/.nvm/versions/node/v10.15.0/bin
 
 Yarn version: 
-  1.5.1
+  1.16.0
 
 Node version: 
-  8.7.0
+  10.15.0
 
 Platform: 
   darwin x64
 
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:57:26)
+
 npm manifest: 
   {
     "name": "nuxtstrap",
-    "version": "0.0.11",
+    "version": "0.0.21",
     "description": "NuxtStrap App for Nuxt Quickstart Guide",
     "author": "David Royer",
     "private": true,
     "scripts": {
-      "dev": "PASSWORD=pass123 nuxt",
+      "dev": "nuxt",
       "dev:api": "yarn api && nuxt",
-      "build": "nuxt build",
-      "start": "nuxt start",
-      "api": "json-server --watch api/db.json",
+      "build": "NODE_ENV=production nuxt build",
+      "start": "NODE_ENV=production nuxt start",
       "generate": "nuxt generate",
       "deploy:now": "now --dotenv --public && now alias"
     },
     "dependencies": {
       "@nuxtjs/axios": "^5.3.1",
       "@nuxtjs/dotenv": "^1.1.1",
+      "@nuxtjs/toast": "^3.0.1",
       "body-parser": "^1.18.3",
       "bootstrap": "^4.0.0-beta.2",
       "bootstrap-vue": "^2.0.0-rc.8",
@@ -84,6 +88,12 @@ Lockfile:
     dependencies:
       consola "^1.1.4"
       http-proxy-middleware "^0.18.0"
+  
+  "@nuxtjs/toast@^3.0.1":
+    version "3.0.1"
+    resolved "https://registry.yarnpkg.com/@nuxtjs/toast/-/toast-3.0.1.tgz#20ea4eeb15dbac12d9967e85b809ca49c8a14cf5"
+    dependencies:
+      vue-toasted "^1.1.24"
   
   "@nuxtjs/youch@^4.2.3":
     version "4.2.3"
@@ -6601,6 +6611,10 @@ Lockfile:
     version "1.6.0"
     resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
   
+  vue-toasted@^1.1.24:
+    version "1.1.24"
+    resolved "https://registry.yarnpkg.com/vue-toasted/-/vue-toasted-1.1.24.tgz#715a371dfa490cc710ffedaaeae61fd8a8c4f7ad"
+  
   vue@^2.5.13:
     version "2.5.16"
     resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
@@ -6881,19 +6895,3 @@ Lockfile:
       cliui "^2.1.0"
       decamelize "^1.0.0"
       window-size "0.1.0"
-
-Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c nuxt start
-  Directory: /Users/droyer/Playground-2017/nuxt-quickstart/nuxtstrap
-  Output:
-  
-      at ProcessTermError.MessageError (/Users/droyer/.yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/Users/droyer/.yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/Users/droyer/.yarn/lib/cli.js:30281:17)
-      at emitTwo (events.js:125:13)
-      at ChildProcess.emit (events.js:213:7)
-      at maybeClose (internal/child_process.js:927:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)

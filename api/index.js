@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 })
 
 app.post('/auth/login', (req, res) => {
-  console.log('process.env:  ', process.env);
+  console.log('process.env.PASSWORD:  ', process.env.PASSWORD);
   if (req.body.username === 'admin' && req.body.password === process.env.PASSWORD) {
     req.session.authUser = {
       username: 'admin'

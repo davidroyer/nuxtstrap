@@ -13,16 +13,16 @@
     "deploy:now": "now --dotenv --public && now alias"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.1",
-    "@nuxtjs/dotenv": "^1.1.1",
-    "@nuxtjs/toast": "^3.0.1",
+    "@nuxtjs/axios": "latest",
+    "@nuxtjs/device": "^1.2.2",
+    "@nuxtjs/dotenv": "latest",
+    "@nuxtjs/toast": "latest",
     "body-parser": "^1.18.3",
-    "bootstrap": "^4.0.0-beta.2",
-    "bootstrap-vue": "^2.0.0-rc.8",
+    "bootstrap": "latest",
+    "bootstrap-vue": "latest",
     "express-session": "^1.15.6",
-    "netlify-identity-widget": "^1.4.13",
-    "nuxt": "^1.0.0",
-    "nuxt-device-detect": "^1.1.1"
+    "netlify-identity-widget": "latest",
+    "nuxt": "lastest"
   },
   "devDependencies": {
     "cross-env": "^5.0.1",

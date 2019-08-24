@@ -60,7 +60,7 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/toast',
     ['bootstrap-vue/nuxt', { css: false }],
-    'nuxt-device-detect',
+    '@nuxtjs/device',
     '@nuxtjs/axios'
   ],
 

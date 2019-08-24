@@ -35,6 +35,12 @@
       "body": "Testing again.",
       "createdAt": 1528360237305,
       "id": 7
+    },
+    {
+      "title": "New Post Aug 23 2019",
+      "body": "Testing what happens!",
+      "createdAt": 1566610875224,
+      "id": 8
     }
   ],
   "comments": [
