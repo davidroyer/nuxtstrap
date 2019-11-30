@@ -3,7 +3,7 @@
     <!-- <AppHeader/> -->
     <b-navbar toggleable="lg" type="dark" variant="dark" class="mb-3">
       <b-container class="b-container-comp">
-        <n-link to="/" tag="b-navbar-brand">NuxtStrap</n-link>
+        <n-link to="/" tag="b-navbar-brand">NuxtStrap - V1</n-link>
 
         <b-navbar-toggle target="nav-collapse" />
 
