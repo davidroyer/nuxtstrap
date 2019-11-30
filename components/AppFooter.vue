@@ -8,9 +8,18 @@
 </template>
 
 <script>
-  export default {
-    name: 'AppFooter'
-  }
+export default {
+  name: 'AppFooter'
+}
 </script>
 
-<style src="@/assets/styles/components/app-footer.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+  footer {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0.5em;
+    background: #eee;
+  }
+</style>

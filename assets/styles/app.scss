@@ -21,6 +21,7 @@ $red: #f46272;
   min-width: 235px;
   justify-content: center !important;
 }
+
 @import "layout";
-// @import 'transitions';
+@import "transitions";
 @import "~bootstrap/scss/bootstrap";

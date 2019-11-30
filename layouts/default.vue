@@ -33,10 +33,9 @@ export default {
 }
 </script>
 
-<style src="@/assets/styles/transitions.scss" lang="scss"></style>
 
 <style>
-.navbar {
-  width: 100%;
-}
+  .navbar {
+    width: 100%;
+  }
 </style>
