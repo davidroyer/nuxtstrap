@@ -1,8 +1,8 @@
 <template>
   <div class="post">
     <nuxt-link to="/posts">&larr; Back To Posts</nuxt-link>
-    <!-- <h2 v-html="post.title" class="post-title"></h2>
-    <article v-html="post.body"></article>-->
+    <h2 v-html="post.title" class="post-title"></h2>
+    <article v-html="post.body"></article>
   </div>
 </template>
 
@@ -12,8 +12,8 @@ export default {
     title: 'Post'
   },
   async asyncData ({ app, params }) {
-    // const post = await app.$axios.$get(`/api/posts/${params.id}`)
-    // return { post }
+    const post = await app.$axios.$get(`posts/${params.id}`)
+    return { post }
   }
 }
 </script>

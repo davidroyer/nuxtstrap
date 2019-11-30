@@ -8,6 +8,7 @@ module.exports = {
   env: {
     adminPassword: process.env.PASSWORD
   },
+
   /*
    ** Headers of the page
    */
@@ -79,16 +80,5 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  serverMiddleware: [
-    session({
-      secret: "super-secret-key",
-      resave: false,
-      saveUninitialized: false,
-      cookie: { maxAge: 60000 }
-    }),
-    // Api middleware
-    // We add /api/login & /api/logout routes
-    "~/api/index.js"
-  ]
+  }
 };
