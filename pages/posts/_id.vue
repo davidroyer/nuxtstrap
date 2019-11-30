@@ -1,8 +1,8 @@
-<template lang="html">
+<template>
   <div class="post">
     <nuxt-link to="/posts">&larr; Back To Posts</nuxt-link>
-    <h2 v-html="post.title" class="post-title"></h2>
-    <article v-html="post.body"></article>
+    <!-- <h2 v-html="post.title" class="post-title"></h2>
+    <article v-html="post.body"></article>-->
   </div>
 </template>
 
@@ -11,9 +11,9 @@ export default {
   head: {
     title: 'Post'
   },
-  async asyncData({ app, params }) {
-    const post = await app.$axios.$get(`/api/posts/${params.id}`)
-    return { post }
+  async asyncData ({ app, params }) {
+    // const post = await app.$axios.$get(`/api/posts/${params.id}`)
+    // return { post }
   }
 }
 </script>
@@ -24,7 +24,7 @@ export default {
   max-width: 800px;
 
   &-title {
-    margin-bottom: .75em;
+    margin-bottom: 0.75em;
     text-transform: capitalize;
   }
 }
