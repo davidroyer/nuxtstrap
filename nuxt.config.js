@@ -64,10 +64,7 @@ module.exports = {
   ],
 
   axios: {
-    baseURL:
-      process.env.NODE_ENV === "production"
-        ? process.env.PRODUCTION_URL
-        : "http://localhost:3000"
+    baseURL: "https://jsonplaceholder.typicode.com"
   },
 
   toast: {
