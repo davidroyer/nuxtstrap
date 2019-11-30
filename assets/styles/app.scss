@@ -1,5 +1,5 @@
-$green: #16C6C0;
-$red: #F46272;
+$green: #16c6c0;
+$red: #f46272;
 // $primary: $green;
 
 #app-wrapper {
@@ -21,6 +21,6 @@ $red: #F46272;
   min-width: 235px;
   justify-content: center !important;
 }
-@import 'layout';
+@import "layout";
 // @import 'transitions';
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
