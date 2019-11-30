@@ -11,39 +11,11 @@ export const mutations = {
 
   setRenderedResult(state, renderResult) {
     state.renderedFrom = renderResult;
-  },
-
-  setUser(state, user) {
-    state.user = user;
   }
 };
 
 export const actions = {
-  nuxtServerInit({ commit }, { req }) {
-    if (process.server && process.static) return;
-    if (req.session && req.session.authUser) {
-      commit("setUser", req.session.authUser);
-    }
-  },
-
-  async adminLogin({ commit }, { username, password }) {
-    const userData = await this.$axios.$post("/api/auth/login", {
-      username,
-      password
-    });
-    commit("setUser", userData);
-    this.$router.push("/admin");
-    await delay(750);
-    this.$toast.info("Successfully Logged In!");
-  },
-
-  async adminLogout({ commit }) {
-    await this.$axios.$post("/api/auth/logout");
-    commit("setUser", null);
-    this.$router.push("/login");
-    await delay(750);
-    this.$toast.show("Successfully Logged Out!");
-  }
+  nuxtServerInit({ commit }, { req }) {}
 };
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
