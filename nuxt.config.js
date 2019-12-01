@@ -1,6 +1,4 @@
 const pkg = require("./package");
-// const bodyParser = require('body-parser')
-const session = require("express-session");
 require("dotenv").config();
 
 module.exports = {
@@ -33,14 +31,11 @@ module.exports = {
   generate: {
     fallback: true
   },
+
   /*
    ** Customize the progress-bar color
    */
-  loading: {
-    color: "#007bff"
-    // height: '5px'
-  },
-  // loading: { color: '#FFFFFF' },
+  loading: { color: "#FFFFFF" },
 
   /*
    ** Global CSS
