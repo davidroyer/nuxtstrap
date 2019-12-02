@@ -1,10 +1,12 @@
-<template lang="html">
+<template>
   <div class="posts">
     <h2>Posts</h2>
     <ul class="post-list">
       <li v-for="post in posts" :key="post.id" class="post-item">
         <h4 v-html="post.title" class="post-title"></h4>
-        <nuxt-link class="post-link" :to="'/posts/'+post.id">View Post</nuxt-link>
+        <nuxt-link :to="'/posts/' + post.id" class="post-link"
+          >View Post</nuxt-link
+        >
       </li>
     </ul>
   </div>
@@ -16,7 +18,7 @@ export default {
     title: 'Posts'
   },
   async asyncData({ app }) {
-    const posts = await app.$axios.$get('/api/posts')
+    const posts = await app.$axios.$get('posts')
     return { posts }
   }
 }
@@ -24,6 +26,10 @@ export default {
 
 <style lang="scss" scoped>
 .post {
+  &-title {
+    text-transform: capitalize;
+  }
+
   &-list {
     list-style-type: none;
     display: flex;
@@ -33,8 +39,8 @@ export default {
 
   &-item {
     flex: 0 1 280px;
-    margin: .75em;
-    padding: .5em 1em;
+    margin: 0.75em;
+    padding: 0.5em 1em;
     height: 140px;
     border: 2px solid lightgray;
   }

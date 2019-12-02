@@ -1,6 +1,6 @@
-# nuxt-starter
+# nuxt-strap
 
-> My super Nuxt.js project
+> My example nuxt.js project
 
 ## Build Setup
 
@@ -8,17 +8,37 @@
 # install dependencies
 $ yarn install
 
-
-
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ yarn dev
 
 # build for production and launch server
-$ yarn run build
+$ yarn build
 $ yarn start
 
 # generate static project
-$ yarn run generate
+$ yarn generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+**Added From Original README**
+
+```md
+📦assets
+┣ 📂images
+┃ ┗ 📜image-example.jpg
+┗ 📂styles
+┃ ┣ 📜app.scss
+┃ ┣ 📜layout.scss
+┃ ┗ 📜transitions.scss
+```
+
+```md
+assets
+┣ images
+┃ ┗ image-example.jpg
+┗ styles
+┃ ┣ app.scss
+┃ ┣ layout.scss
+┃ ┗ transitions.scss
+```
