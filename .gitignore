@@ -14,3 +14,4 @@ dist
 .BACKUP
 
 .env
+.DS_Store
