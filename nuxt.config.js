@@ -60,7 +60,7 @@ module.exports = {
   ],
 
   axios: {
-    baseURL: "https://jsonplaceholder.typicode.com"
+    baseURL: "https://json-api.now.sh"
   },
 
   toast: {
