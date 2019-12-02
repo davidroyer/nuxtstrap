@@ -4,7 +4,9 @@
     <ul class="post-list">
       <li v-for="post in posts" :key="post.id" class="post-item">
         <h4 v-html="post.title" class="post-title"></h4>
-        <nuxt-link class="post-link" :to="'/posts/'+post.id">View Post</nuxt-link>
+        <nuxt-link :to="'/posts/' + post.id" class="post-link"
+          >View Post</nuxt-link
+        >
       </li>
     </ul>
   </div>
@@ -15,7 +17,7 @@ export default {
   head: {
     title: 'Posts'
   },
-  async asyncData ({ app }) {
+  async asyncData({ app }) {
     const posts = await app.$axios.$get('posts')
     return { posts }
   }

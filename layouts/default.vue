@@ -18,9 +18,8 @@ export default {
 }
 </script>
 
-
 <style>
-  .navbar {
-    width: 100%;
-  }
+.navbar {
+  width: 100%;
+}
 </style>

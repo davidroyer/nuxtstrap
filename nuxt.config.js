@@ -1,72 +1,69 @@
-const pkg = require("./package");
-require("dotenv").config();
-
-module.exports = {
-  // mode: 'universal',
-  env: {
-    adminPassword: process.env.PASSWORD
-  },
-
+export default {
+  mode: 'universal',
   /*
    ** Headers of the page
    */
   head: {
-    titleTemplate: "%s - NuxtStrap",
+    title: process.env.npm_package_name || '',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: pkg.description }
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || ''
+      }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
-  },
-
-  dir: {
-    middleware: "router-middleware" // Default: 'middleware'
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   router: {
-    middleware: "rendered"
-  },
-
-  generate: {
-    fallback: true
+    middleware: 'rendered'
   },
 
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#FFFFFF" },
-
+  loading: { color: '#fff' },
   /*
    ** Global CSS
    */
-  css: ["@/assets/styles/app.scss"],
+  css: ['@/assets/styles/app.scss'],
 
+  // css: ['@/assets/styles/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [],
-
+  /*
+   ** Nuxt.js dev-modules
+   */
+  buildModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module'
+  ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    ,
-    "@nuxtjs/dotenv",
-    "@nuxtjs/toast",
-    ["bootstrap-vue/nuxt", { css: false }],
-    "@nuxtjs/device",
-    "@nuxtjs/axios"
+    '@nuxtjs/axios',
+
+    // Doc: https://bootstrap-vue.js.org
+    'bootstrap-vue/nuxt'
   ],
 
+  /**
+   * Modules Config/Customizations
+   */
   axios: {
-    baseURL: "https://json-api.now.sh"
+    baseURL: 'https://json-api.now.sh'
   },
 
-  toast: {
-    position: "top-center",
-    duration: 1500
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false // Or `bvCSS: false`
   },
+
   /*
    ** Build configuration
    */
@@ -75,5 +72,9 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+
+  generate: {
+    dir: 'public'
   }
-};
+}
