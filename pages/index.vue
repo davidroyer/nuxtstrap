@@ -1,6 +1,6 @@
 <template>
   <div class>
-    <h1 class="title">Home Page test</h1>
+    <h1 class="title">Home Page</h1>
     <img
       class="hero-image"
       src="@/assets/images/image-example.jpg"
