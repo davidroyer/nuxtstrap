@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
   mode: 'universal',
   /*
@@ -75,6 +77,10 @@ export default {
   },
 
   generate: {
+    async routes() {
+      const { data } = await axios.get('https://json-api.now.sh/posts')
+      return data.map((post) => `posts/${post.id}`)
+    },
     dir: 'public',
     fallback: true
   }
