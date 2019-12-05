@@ -2,6 +2,8 @@
 
 > Tips of using `YAML` and `JSON` to seperate out data from our code.
 
+**`db/site.yaml`**
+
 ```yaml
 nav:
   - title: Shop
