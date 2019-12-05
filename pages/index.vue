@@ -33,7 +33,7 @@
 <script>
 export default {
   head: {
-    title: 'Home'
+    // title: 'Home'
   },
   data: () => ({
     modalShow: false,

@@ -10,6 +10,7 @@
 export default {
   head: {
     title: 'Post'
+    // title: this.post.title
   },
   async asyncData({ app, params }) {
     const post = await app.$axios.$get(`posts/${params.id}`)

@@ -1,7 +1,10 @@
+import siteData from '@/db/site.yaml'
+
 export const state = () => ({
   loading: false,
   renderedFrom: null,
-  user: null
+  user: null,
+  site: siteData
 })
 
 export const mutations = {

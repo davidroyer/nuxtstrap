@@ -1,0 +1,12 @@
+nav:
+  - title: Shop
+    path: /shop
+
+  - title: Wholesale
+    path: /wholesale
+
+  - title: Locations
+    path: /locations
+
+  - title: Our Store
+    path: /our-store
