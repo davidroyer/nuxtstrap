@@ -6,6 +6,7 @@
       src="@/assets/images/image-example.jpg"
       alt="Image Example"
     />
+    <pre>{{ this.$store.site }}</pre>
     <b-button @click="modalShow = !modalShow" variant="primary"
       >Open Modal</b-button
     >
