@@ -67,19 +67,16 @@ export default {
   },
 
   webfontloader: {
-    // add Google Fonts as "custom" | workaround required
     custom: {
       families: ['Noto Sans:n4', 'Lato:n4,n7'],
       urls: [
-        // for each Google Fonts add url + options you want
-        // here add font-display option
         // 'https://fonts.googleapis.com/css?family=Noto+Sans:400,400i&display=swap',
         'https://fonts.googleapis.com/css?family=Noto+Sans:400&display=swap',
         'https://fonts.googleapis.com/css?family=Lato:400,700&display=swap'
       ]
     }
   },
-  // @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Noto+Sans:400,400i,700,700i&display=swap');
+
   /*
    ** Build configuration
    */
