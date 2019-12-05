@@ -12,7 +12,11 @@ This example is assuming we have a dynamic route file of `posts/_id.vue`.
 
 ## Example Code
 
-**`post/_id.vue`**
+### Regular Way
+
+This way returns an `Array` of routes.
+
+**`posts/_id.vue`**
 
 ```js
 export default {
@@ -23,7 +27,7 @@ export default {
 }
 ```
 
-**In `nuxt.config.js`**
+**`nuxt.config.js`**
 
 ```js
 import axios from 'axios'
@@ -38,12 +42,14 @@ export default {
 }
 ```
 
-## Using the `payload` option
+### Using The `payload` Option
 
 If you have a lot of routes being processed though then you might want to you
 the `payload` option referenced
 [here](https://nuxtjs.org/api/configuration-generate#speeding-up-dynamic-route-generation-with-code-payload-code-)
 in the Nuxt.js docs.
+
+This way returns an `Array` of `Objects`.
 
 Here is what that would look like:
 
