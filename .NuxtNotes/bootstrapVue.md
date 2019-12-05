@@ -8,6 +8,8 @@
 
 ## Example Code
 
+**`nuxt.config.js`**
+
 ```js
 export default {
   bootstrapVue: {
@@ -28,5 +30,3 @@ $font-family-sans-serif: 'Lato';
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap-vue/src/index.scss';
 ```
-
-**`nuxt.config.js`**
