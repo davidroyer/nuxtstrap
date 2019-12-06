@@ -1,3 +1,6 @@
+title: NuxtStrap
+description: An example Nuxt.js app with BootstrapVue.
+
 nav:
   - title: Home
     path: /

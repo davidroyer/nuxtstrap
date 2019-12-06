@@ -1,4 +1,10 @@
+/* eslint-disable no-console */
+import { readFileSync } from 'fs'
 import axios from 'axios'
+import yaml from 'js-yaml'
+
+const fileContents = readFileSync('db/site.yaml', 'utf8')
+const siteData = yaml.safeLoad(fileContents)
 
 export default {
   mode: 'universal',
@@ -7,7 +13,7 @@ export default {
    */
   head: {
     titleTemplate: (titleChunk) => {
-      return titleChunk ? `${titleChunk} - NuxtStrap` : 'NuxtStrap'
+      return titleChunk ? `${titleChunk} -${siteData.title}` : siteData.title
     },
 
     meta: [
@@ -16,7 +22,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: siteData.description
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
