@@ -12,8 +12,11 @@ export default {
    ** Headers of the page
    */
   head: {
+    /**
+     * NOTE: It does not work to try to use `siteData` here because its undefined for some reason
+     */
     titleTemplate: (titleChunk) => {
-      return titleChunk ? `${titleChunk} -${siteData.title}` : siteData.title
+      return titleChunk ? `${titleChunk} - NuxtStrap` : 'NuxtStrap'
     },
 
     meta: [
