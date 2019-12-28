@@ -62,7 +62,12 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios', 'nuxt-webfontloader', 'bootstrap-vue/nuxt'],
+  modules: [
+    '@nuxtjs/axios',
+    'nuxt-webfontloader',
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/sitemap'
+  ],
 
   navi: {
     src: 'db/nav.yml'
@@ -98,12 +103,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    // extend(config, ctx) {
-    //   config.module.rules.push({
-    //     test: /\.ya?ml$/,
-    //     use: 'js-yaml-loader'
-    //   })
-    // }
+    extend(config, ctx) {}
   },
 
   generate: {
@@ -111,7 +111,14 @@ export default {
       const { data } = await axios.get('https://json-api.now.sh/posts')
       return data.map((post) => `posts/${post.id}`)
     },
+
     dir: 'public',
     fallback: true
+  },
+
+  sitemap: {
+    hostname: 'https://nuxtstrap.now.sh/',
+    gzip: true,
+    exclude: ['/404']
   }
 }
