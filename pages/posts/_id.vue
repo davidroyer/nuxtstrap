@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <nuxt-link to="/posts">&larr; Back To Posts</nuxt-link>
-    <h2 v-html="post.title" class="post-title"></h2>
+    <h1 v-html="post.title" class="post-title" />
     <article v-html="post.body"></article>
   </div>
 </template>

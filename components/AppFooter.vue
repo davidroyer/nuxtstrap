@@ -1,19 +1,17 @@
 <template>
-  <footer>
-    <h4 class="render-result">
-      Rendered From:
-      <span v-text="$store.state.renderedFrom" class="subtitle"></span>
-    </h4>
+  <footer class="bg-dark mt-4 pt-3 pb-1 text-white">
+    <b-container class="text-center">
+      <b-row>
+        <b-col align-v="center">
+          <h4 class="h5">
+            Rendered From:
+            <span
+              v-text="$store.state.renderedFrom"
+              class="font-weight-bold"
+            ></span>
+          </h4>
+        </b-col>
+      </b-row>
+    </b-container>
   </footer>
 </template>
-
-<style lang="scss" scoped>
-footer {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  align-items: center;
-  padding: 0.5em;
-  background: #eee;
-}
-</style>

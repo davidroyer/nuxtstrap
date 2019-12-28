@@ -1,14 +1,21 @@
 <template>
   <div class="posts">
-    <h2>Posts</h2>
-    <ul class="post-list">
-      <li v-for="post in posts" :key="post.id" class="post-item">
-        <h4 v-html="post.title" class="post-title"></h4>
-        <nuxt-link :to="'/posts/' + post.id" class="post-link"
-          >View Post</nuxt-link
-        >
-      </li>
-    </ul>
+    <h1 class="mb-5 text-center">Posts</h1>
+    <b-card-group deck>
+      <b-card
+        v-for="post in posts"
+        :key="post.id"
+        :title="post.title"
+        style="max-width: 20rem;"
+        class="post-title mb-2"
+      >
+        <b-card-text>
+          <b-button :to="'/posts/' + post.id" nuxt variant="primary"
+            >View Post</b-button
+          >
+        </b-card-text>
+      </b-card>
+    </b-card-group>
   </div>
 </template>
 
@@ -25,28 +32,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card {
+  &-deck {
+    justify-content: space-around;
+
+    .card {
+      flex: 1 1 360px;
+    }
+  }
+}
 .post {
   &-title {
     text-transform: capitalize;
-  }
-
-  &-list {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-  }
-
-  &-item {
-    flex: 0 1 280px;
-    margin: 0.75em;
-    padding: 0.5em 1em;
-    height: 140px;
-    border: 2px solid lightgray;
-  }
-
-  &-title {
-    font-size: 1.25em;
     font-weight: 400;
   }
 }

@@ -33,3 +33,15 @@ img {
 .page-leave-active {
   opacity: 0;
 }
+
+#app-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  #view {
+    flex: 1 1 100%;
+  }
+}

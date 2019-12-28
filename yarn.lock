@@ -6067,12 +6067,12 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-navi@davidroyer/nuxt-navi:
-  version "0.0.0"
-  resolved "https://codeload.github.com/davidroyer/nuxt-navi/tar.gz/a33d343f756117cf8d7992e7d2a62f2ff309f229"
+nuxt-navi@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/nuxt-navi/-/nuxt-navi-0.0.2.tgz#74c1c0efadf215b537131ee8ce7cb605f8421887"
+  integrity sha512-yhBzRP60oF7jW3R6cnM83pdILfXN2gC3tSaEJfpOpHJhq6UwmzGI63ifJzLOIGl9rOa919GrFo+hrBQH5sKjzg==
   dependencies:
     "@sindresorhus/slugify" "^0.9.1"
-    js-yaml "^3.13.1"
     js-yaml-loader "^1.2.2"
 
 nuxt-webfontloader@^1.1.0:
