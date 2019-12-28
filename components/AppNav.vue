@@ -7,9 +7,18 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item exact to="/">Home</b-nav-item>
+          <b-nav-item
+            v-for="item in $store.state.nav"
+            :key="item.path"
+            :to="item.path"
+            exact
+          >
+            {{ item.title }}
+          </b-nav-item>
+
+          <!-- <b-nav-item exact to="/">Home</b-nav-item>
           <b-nav-item to="/about">About</b-nav-item>
-          <b-nav-item to="/posts">Posts</b-nav-item>
+          <b-nav-item to="/posts">Posts</b-nav-item> -->
         </b-navbar-nav>
       </b-collapse>
     </b-container>

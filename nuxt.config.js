@@ -55,17 +55,18 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    'nuxt-navi'
   ],
+
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/axios',
-    'nuxt-webfontloader',
-    // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt'
-  ],
+  modules: ['@nuxtjs/axios', 'nuxt-webfontloader', 'bootstrap-vue/nuxt'],
+
+  navi: {
+    src: 'db/nav.yml'
+  },
 
   /**
    * Modules Config/Customizations
@@ -97,12 +98,12 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-      config.module.rules.push({
-        test: /\.ya?ml$/,
-        use: 'js-yaml-loader'
-      })
-    }
+    // extend(config, ctx) {
+    //   config.module.rules.push({
+    //     test: /\.ya?ml$/,
+    //     use: 'js-yaml-loader'
+    //   })
+    // }
   },
 
   generate: {
